@@ -20,12 +20,39 @@
   ],
   "bindingsTrays": [
     {
-      "key": "tray-key",
-      "name": {
-        "key": "tray"
-      },
+      "key": "income",
+      "name": "Income",
+      "queryRole": "row",
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "key": "Life Expectancy",
+      "name": "Life Expectancy",
+      "queryRole": "row",
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "key": "Population",
+      "name": "Population",
+      "queryRole": "row",
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "key": "Country",
+      "name": "Country",
       "queryRole": "measure",
-      "minCount": 1
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "key": "Year",
+      "name": "Year",
+      "queryRole": "measure",
+      "minCount": 1,
+      "maxCount": 1
     }
   ]
 }

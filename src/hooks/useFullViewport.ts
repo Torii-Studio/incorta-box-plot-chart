@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 import { getRectDimensions } from 'utils/general';
 
@@ -8,32 +8,30 @@ const DEFAULT_RECT = {
 };
 
 const useFullViewport = (ref: any) => {
-  const [rect, setRect] = useState(DEFAULT_RECT)
+  const [rect, setRect] = useState(DEFAULT_RECT);
 
   const updateProps = () => {
-    if (!ref ||  !ref?.current?.parentNode) return null
+    if (!ref || !ref?.current?.parentNode) return;
 
-    const { width, height } = getRectDimensions(ref?.current.parentNode)
+    const { width, height } = getRectDimensions(ref?.current.parentNode);
 
     setRect({
       width,
       height
-    })
-  }
+    });
+  };
 
   useEffect(() => {
-    updateProps()
-  }, [ref])
-
+    updateProps();
+  }, [ref]);
 
   useEffect(() => {
-    window.addEventListener('resize', updateProps)
+    window.addEventListener('resize', updateProps);
 
     return () => {
-      window.removeEventListener('resize', updateProps)
-    }
-  }, [])
-
+      window.removeEventListener('resize', updateProps);
+    };
+  }, []);
 
   return {
     rect

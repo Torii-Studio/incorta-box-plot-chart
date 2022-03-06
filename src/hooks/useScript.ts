@@ -7,6 +7,7 @@ const ERROR_STATUS = 'error';
 const useScript = (src: string) => {
   // Keep track of script status ("idle", "loading", "ready", "error")
   const [status, setStatus] = useState(src ? 'loading' : 'idle');
+  
   useEffect(
     () => {
       // Allow falsy src value if waiting on other data needed for
